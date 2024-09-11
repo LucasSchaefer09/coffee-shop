@@ -16,12 +16,26 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: var(--coffee-dark);
-    background-color: var(--cream);
+    color: var(--cream);
+    background-image: url('/imagem/tasty-cup-coffee-new-delicious-mini-cakes-with-different-shapes-wooden-table-coffee-shop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
 }
 
 header {
-    background-color: var(--coffee-dark);
+    background-color: rgba(60, 42, 33, 0.8);
     color: var(--cream);
     padding: 1rem 0;
     position: fixed;
@@ -71,6 +85,9 @@ section {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: rgba(60, 42, 33, 0.8);
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 h1, h2 {
@@ -78,16 +95,13 @@ h1, h2 {
 }
 
 .hero {
-    background-image: url('/placeholder.svg?height=600&width=1200');
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--cream);
+    background-color: transparent;
 }
 
 .hero h1 {
@@ -133,7 +147,7 @@ h1, h2 {
 }
 
 .menu-item {
-    background-color: var(--coffee-light);
+    background-color: rgba(219, 193, 172, 0.1);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
@@ -161,6 +175,13 @@ h1, h2 {
     padding: 0.5rem;
     border: 1px solid var(--coffee-medium);
     border-radius: 5px;
+    background-color: rgba(242, 227, 213, 0.1);
+    color: var(--cream);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(242, 227, 213, 0.7);
 }
 
 .contact-form button {
@@ -178,7 +199,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: var(--coffee-dark);
+    background-color: rgba(60, 42, 33, 0.8);
     color: var(--cream);
     text-align: center;
     padding: 1rem 0;
